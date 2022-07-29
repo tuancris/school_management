@@ -1,0 +1,25 @@
+2022-07-07 12:20:05,625 12872 INFO ? odoo: Odoo version 15.0-20220705 
+2022-07-07 12:20:05,625 12872 INFO ? odoo: Using configuration file at C:\odoo\server\odoo.conf 
+2022-07-07 12:20:05,625 12872 INFO ? odoo: addons paths: ['C:\\odoo\\server\\odoo\\addons', 'c:\\users\\nguye\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\server\\odoo\\addons'] 
+2022-07-07 12:20:05,625 12872 INFO ? odoo: database: openpg@localhost:5432 
+2022-07-07 12:20:06,137 12872 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\thirdparty\wkhtmltopdf.exe 
+2022-07-07 12:20:06,652 12872 INFO ? odoo.service.server: Initiating shutdown 
+2022-07-07 12:20:06,652 12872 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-07-07 12:20:08,665 7632 INFO ? odoo: Odoo version 15.0-20220705 
+2022-07-07 12:20:08,665 7632 INFO ? odoo: Using configuration file at C:\odoo\server\odoo.conf 
+2022-07-07 12:20:08,665 7632 INFO ? odoo: addons paths: ['C:\\odoo\\server\\odoo\\addons', 'c:\\users\\nguye\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\odoo\\server\\odoo\\addons'] 
+2022-07-07 12:20:08,665 7632 INFO ? odoo: database: openpg@localhost:5432 
+2022-07-07 12:20:08,850 7632 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\odoo\thirdparty\wkhtmltopdf.exe 
+2022-07-07 12:20:09,037 7632 INFO ? odoo.service.server: HTTP service (werkzeug) running on Dell-Inspiron:8069 
+2022-07-07 12:20:09,069 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:09,094 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:26,534 7632 INFO ? odoo.http: HTTP Configuring static files 
+2022-07-07 12:20:26,625 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:26,626 7632 INFO ? odoo.http: Generating nondb routing 
+2022-07-07 12:20:26,658 7632 INFO ? werkzeug: 127.0.0.1 - - [07/Jul/2022 12:20:26] "GET / HTTP/1.1" 303 - 0 0.000 0.103
+2022-07-07 12:20:26,819 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:26,887 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:26,893 7632 INFO ? werkzeug: 127.0.0.1 - - [07/Jul/2022 12:20:26] "GET /web HTTP/1.1" 303 - 0 0.000 0.223
+2022-07-07 12:20:26,952 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:27,067 7632 INFO ? odoo.sql_db: Connection to the database failed 
+2022-07-07 12:20:27,113 7632 INFO ? werkzeug: 127.0.0.1 - - [07/Jul/2022 12:20:27] "GET /web/database/selector HTTP/1.1" 200 - 0 0.000 0.212
