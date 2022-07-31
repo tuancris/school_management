@@ -11,7 +11,6 @@ def timer(func):
         run_time = end_time - start_time
         print(f"Finished running {func.__name__} in {run_time:.4f} seconds.")
         return val
-
     return wrapper
 
 

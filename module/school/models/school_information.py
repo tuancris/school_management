@@ -1,6 +1,8 @@
 import base64
 import tempfile
 import json
+import time
+import functools
 
 import self as self
 import xlrd
@@ -19,6 +21,22 @@ def remove_dot_zeros_float(float_param):
             return float(float_param)
     else:
         return float_param
+
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        val = func(*args, **kwargs)
+        end_time = time.time()
+        run_time = end_time - start_time
+        print(f"Finished running {func.__name__} in {run_time:.4f} seconds.")
+        return val
+
+    return wrapper
+
+
+
 
 class SchoolInformation(models.Model):
     _name = "school.information"
@@ -56,6 +74,9 @@ class SchoolInformation(models.Model):
             else:
                 re.tuition = '1.000.000'
 
+
+
+    @timer
     def btn_upload_data(self):
         if not self.document:
             raise ValidationError(u'Chưa chọn file import.')
@@ -108,3 +129,9 @@ class SchoolInformation(models.Model):
         except Exception as e:
             print(e)
             raise ValidationError(u'File import chưa đúng định dạng file mẫu, vui lòng kiểm tra lại!')
+
+
+
+if __name__ == '__main__':
+    calc = SchoolInformation()
+    calc.btn_upload_data(10)
