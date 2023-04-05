@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="school_information_list_view" model="ir.ui.view">
+            <field name="name">School Information List</field>
+            <field name="model">school.information</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách trường">
+                    <field name="sch_id"  optional="show"/>
+                    <field name="name"  optional="show"/>
+                    <field name="type"  optional="show"/>
+                    <field name="email" optional="show"/>
+                    <field name="address" optional="show"/>
+                    <field name="tuition" optional="show"/>
+                    <field name="hasOnlineClass" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="school_information_form_view" model="ir.ui.view">
+            <field name="name">School Information</field>
+            <field name="model">school.information</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="sch_id"/>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="email"/>
+                            <field name="address"/>
+                        </group>
+                        <group>
+                            <field name="hasOnlineClass"/>
+                            <field name="document" filename="document_name"/>
+                            <field name="document_name" invisible="1"/>
+                            <field name="tuition" optional="show"/>
+                        </group>
+                        <group>
+                            <field name="class_list" optional="show">
+                            </field>
+                        </group>
+                        <header>
+                            <button name="btn_upload_data" string="Import" class="oe_highlight" type="object" data-hotkey="z"/>
+                        </header>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        tao action-->
+        <record id="action_school_information" model="ir.actions.act_window">
+            <field name="name">School Information </field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new school for more
+                </p>
+            </field>
+        </record>
+
+
+        <!--        tao menu-->
+        <menuitem id="school_menu_root"
+            name="School"
+            sequence="10"/>
+
+        <menuitem id="school_menu"
+            name="Trường Học"
+            parent="school_menu_root"
+            action="action_school_information"
+            sequence="10"/>
+
+    </data>
+</odoo>
