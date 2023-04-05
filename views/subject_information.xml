@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="subject_information_list_view" model="ir.ui.view">
+            <field name="name">Subject Information List</field>
+            <field name="model">subject.information</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách môn học">
+                    <field name="name" optional="show"/>
+                    <field name="room" optional="show"/>
+                    <field name="thu" optional="show"/>
+                    <field name="start_day" optional="show"/>
+                    <field name="end_day" optional="show"/>
+                    <field name="start_time" optional="show"/>
+                    <field name="end_time" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="subject_information_form_view" model="ir.ui.view">
+            <field name="name">Subject Information Form</field>
+            <field name="model">subject.information</field>
+            <field name="arch" type="xml">
+                <tree string="=Danh sách môn học">
+                    <field name="name"/>
+                    <field name="room"/>
+                    <field name="thu"/>
+                    <field name="start_day"/>
+                    <field name="end_day"/>
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_subject_information" model="ir.actions.act_window">
+            <field name="name">Subject Information</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">subject.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new subject for more
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="subject_submenu_information_menu"
+                  name="Môn Học"
+                  parent="school.student_information_menu"
+                  action="action_subject_information"
+                  sequence="10"/>
+
+    </data>
+</odoo>
